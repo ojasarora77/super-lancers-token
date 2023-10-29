@@ -1,0 +1,21 @@
+{
+  "name": "token",
+  "version": "1.0.0",
+  "description": "My first token contract",
+  "main": "index.js",
+  "author": "1000x Dev",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "yarn clean && tsc -b",
+    "build:dev": "tsc -b --watch",
+    "clean": "rm -rf ./dest tsconfig.tsbuildinfo",
+    "start": "yarn build && DEBUG='token' node ./dest/index.js"
+  },
+  "dependencies": {
+    "@aztec/aztec.js": "latest",
+    "@aztec/noir-contracts": "latest",
+    "@types/node": "^20.6.3",
+    "typescript": "^5.2.2"
+  }
+}
